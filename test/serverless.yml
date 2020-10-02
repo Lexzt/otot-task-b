@@ -10,6 +10,7 @@ provider:
 
 install:
   - npm install -g serverless
+  - npm install serverless-http
   - travis_retry npm install
 
 functions:
