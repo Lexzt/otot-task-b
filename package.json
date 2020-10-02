@@ -4,20 +4,17 @@
   "description": "CS3219 task b1",
   "main": "main.js",
   "scripts": {
-    "start": "node ./test/main.js",
+    "start": "node ./app.local.js",
     "test": "cross-env NODE_ENV=test jest --testTimeout=10000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.765.0",
-    "aws-xray-sdk-core": "^3.2.0",
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "jest": "^26.4.2",
     "node-fetch": "^2.6.0",
     "path": "^0.12.7",
-    "serverless-http": "^2.6.0",
     "supertest": "^5.0.0"
   },
   "devDependencies": {

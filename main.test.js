@@ -1,6 +1,6 @@
 const supertest = require("supertest");
 const http = require("http");
-const app = require("./test/app.js");
+const app = require("./app.js");
 
 describe("Get Endpoints", () => {
   let server;
