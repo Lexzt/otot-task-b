@@ -8,6 +8,10 @@ provider:
   runtime: nodejs12.x
   region: ap-southeast-1
 
+install:
+  - npm install -g serverless
+  - travis_retry npm install
+
 functions:
   hello:
     handler: lambda.hello

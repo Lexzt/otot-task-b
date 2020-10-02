@@ -15,5 +15,5 @@
 // };
 
 const serverless = require("serverless-http");
-const app = require("../main.js");
-module.exports.handler = serverless(app);
+const app = require("./main.js");
+module.exports.hello = serverless(app);
