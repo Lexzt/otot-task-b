@@ -1,3 +1,9 @@
 language: node_js
 node_js:
   - 12
+deploy:
+  provider: lambda
+  access_key_id: AKIAYUQ6KUWU6RAUVKFI
+  secret_access_key: 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
+  function_name: my-function
+  edge: true # opt in to dpl v2
