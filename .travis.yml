@@ -6,19 +6,14 @@ deploy_service_job: &DEPLOY_SERVICE_JOB
   cache:
     directories:
       - node_modules
-      - ${SERVICE_PATH}/node_modules
 
   install:
-    - npm install -g serverless
+    - npm install claudia -g
     - travis_retry npm install
-    - cd ${SERVICE_PATH}
-    - travis_retry npm install
-    - cd -
 
   script:
-    - cd ${SERVICE_PATH}
-    - serverless deploy -s ${STAGE_NAME}
-    - cd -
+    - claudia generate-serverless-express-proxy --express-module app
+    - claudia create --handler lambda.handler --deploy-proxy-api --region ap-southeast-1
 
 environments:
   - &MAIN_ENV
