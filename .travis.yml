@@ -16,6 +16,7 @@ deploy_service_job: &DEPLOY_SERVICE_JOB
     - cd -
 
   script:
+    - npm test
     - cd ${SERVICE_PATH}
     - serverless deploy -s ${STAGE_NAME}
     - cd -
